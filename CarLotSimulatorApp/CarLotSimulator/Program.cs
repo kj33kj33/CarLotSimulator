@@ -20,6 +20,8 @@ namespace CarLotSimulator
             truck.MakeHonkNoise();
             carLot.Cars.Add(truck);
 
+            Console.WriteLine($"There is {CarLot.numberOfCars} car on the lot.");
+
             Console.WriteLine("-------------------------");
 
             var convertible = new Car()
@@ -36,6 +38,8 @@ namespace CarLotSimulator
             convertible.MakeHonkNoise();
             carLot.Cars.Add(convertible);
 
+            Console.WriteLine($"There are {CarLot.numberOfCars} cars on the lot.");
+
             Console.WriteLine("-------------------------");
 
             var suv = new Car(2022, "Subaru", "Outback", "Vroom-vroom-vroom, hummmmmm!", "Meep-meep-beep!", true);
@@ -44,9 +48,11 @@ namespace CarLotSimulator
             suv.MakeHonkNoise();
             carLot.Cars.Add(suv);
 
+            Console.WriteLine($"There are {CarLot.numberOfCars} cars on the lot.");
+
             Console.WriteLine("-------------------------");
 
-            Console.WriteLine("We have the following cars on the lot:");
+            Console.WriteLine($"We have the following {CarLot.numberOfCars} cars on the lot:");
             foreach (Car car in carLot.Cars)
             {
                 Console.WriteLine($"A {car.Year} {car.Make} {car.Model}");
